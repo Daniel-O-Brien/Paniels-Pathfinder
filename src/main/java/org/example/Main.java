@@ -56,18 +56,16 @@ public class Main {
 
         System.out.println("You have clicked: " + x + "," + y);
 
-        for(double j = (y - 30); j < (y + 30); j++)
+        for(double j = (y - 2); j < (y + 2); j++)
         {
 
-            for (double i = (x - 30); i < (x + 30); i++)
+            for (double i = (x - 2); i < (x + 2); i++)
             {
-                this.writer.setColor( (int) j, (int) i, Color.RED);
-                System.out.println(i + "," + j);
+                this.writer.setColor( (int) i, (int) j, Color.RED);
             }
 
-            mapView.setImage(this.writableImage);
+            System.out.println();
         }
-        /**Figure out how to set the map to the writable image */
 
     }
 
