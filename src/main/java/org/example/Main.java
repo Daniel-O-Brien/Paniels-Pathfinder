@@ -56,17 +56,21 @@ public class Main {
 
         System.out.println("You have clicked: " + x + "," + y);
 
-        for(double j = (y - 2); j < (y + 2); j++)
-        {
+        try {
+//            for (double j = (x - 2); j < (x + 2); j++) {
+//                System.out.print(j + ":");
+//
+//                for (double i = (y - 2); i < (y + 2); i++) {
+//                    this.writer.setColor((int) i, (int) j, Color.RED);
+//                    System.out.print(i + "  ");
+//                }
+//
+//                System.out.println();
 
-            for (double i = (x - 2); i < (x + 2); i++)
-            {
-                this.writer.setColor( (int) i, (int) j, Color.RED);
-            }
+            this.writer.setColor((int) x, (int) y, Color.RED);
 
-            System.out.println();
-        }
-
+        } catch (IndexOutOfBoundsException e){System.out.print("Out of bounds caught!");}
+        this.mapView.setImage(this.writableImage);
     }
 
 }
