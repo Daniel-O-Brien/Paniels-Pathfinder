@@ -28,7 +28,7 @@ public class Main {
         this.mapReader = map.getPixelReader();
 
         this.writableImage = new WritableImage((int) this.map.getWidth(), (int) this.map.getHeight());
-        writer = writableImage.getPixelWriter();
+        this.writer = writableImage.getPixelWriter();
     }
 
 
@@ -64,7 +64,7 @@ public class Main {
                 }
             }
         } catch (IndexOutOfBoundsException e){System.out.print("Out of bounds caught!");}
-        this.mapView.setImage(this.writableImage);
+
     }
 
 }
