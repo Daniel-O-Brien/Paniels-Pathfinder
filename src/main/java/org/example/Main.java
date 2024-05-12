@@ -4,11 +4,15 @@ import java.io.IOException;
 import java.io.Reader;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Point2D;
 import javafx.scene.Cursor;
 import javafx.scene.control.Slider;
 import javafx.scene.image.*;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+
+import static javafx.scene.input.MouseButton.PRIMARY;
 
 public class Main {
 
@@ -20,6 +24,7 @@ public class Main {
     private WritableImage writableImage;
     private PixelWriter writer;
     private PixelReader mapReader;
+    private GraphNodeAL<Point2D> point;
 
 
     public void initialize()
@@ -53,6 +58,11 @@ public class Main {
         //Setting coordinates.
         x = mouseEvent.getX();
         y = mouseEvent.getY();
+
+        if(point == null)
+            point = new GraphNodeAL<>(new Point2D(x, y));
+        else
+            point.connectToNodeUndirected(new GraphNodeAL<>(new Point2D(x, y)));
 
         System.out.println("You have clicked: " + x + "," + y);
 
