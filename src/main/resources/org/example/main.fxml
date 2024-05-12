@@ -33,7 +33,7 @@
             </Slider>
             <ImageView fx:id="mapView" fitHeight="371.0" fitWidth="524.0" layoutX="60.0" layoutY="83.0" onMouseClicked="#selectLocation" pickOnBounds="true" preserveRatio="true">
                <image>
-<!--                  <Image url="" />-->
+                  <Image url="@map.png"/>
                </image>
                <cursor>
                   <Cursor fx:constant="CROSSHAIR" />
