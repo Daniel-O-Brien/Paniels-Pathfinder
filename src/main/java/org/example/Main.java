@@ -13,16 +13,20 @@ import javafx.scene.paint.Color;
 public class Main {
 
     public ImageView mapView;
+
     public Slider zoom;
 
-    private Image map = mapView.getImage();
-    private PixelReader mapReader = map.getPixelReader();
+    private Image map;
     private WritableImage writableImage;
     private PixelWriter writer;
+    private PixelReader mapReader;
 
 
     public void initialize()
     {
+        this.map = mapView.getImage();
+        this.mapReader = map.getPixelReader();
+
         this.writableImage = new WritableImage((int) this.map.getWidth(), (int) this.map.getHeight());
         writer = writableImage.getPixelWriter();
     }
