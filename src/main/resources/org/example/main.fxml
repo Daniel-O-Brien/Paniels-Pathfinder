@@ -12,39 +12,39 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Main">
-   <top>
-      <Pane prefHeight="100.0" prefWidth="870.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
-         <children>
-            <TextField editable="false" focusTraversable="false" layoutX="324.0" layoutY="23.0" prefHeight="55.0" prefWidth="236.0" text="PARIS NAVIGATOR">
-               <font>
-                  <Font name="Berlin Sans FB Demi Bold" size="23.0" />
-               </font>
-            </TextField>
-         </children>
-      </Pane>
-   </top>
-   <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Slider fx:id="zoom" layoutX="8.0" layoutY="119.0" majorTickUnit="100.0" maxHeight="300.0" minorTickCount="5" onMousePressed="#closeHand" onMouseReleased="#openHand" orientation="VERTICAL" prefHeight="300.0" prefWidth="46.0" showTickLabels="true" showTickMarks="true">
-               <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
-               </cursor>
-            </Slider>
-            <ImageView fx:id="mapView" fitHeight="371.0" fitWidth="524.0" layoutX="60.0" layoutY="83.0" onMouseClicked="#selectLocation" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@map.png"/>
-               </image>
-               <cursor>
-                  <Cursor fx:constant="CROSSHAIR" />
-               </cursor>
-            </ImageView>
-            <Text layoutX="8.0" layoutY="109.0" opacity="0.81" strokeType="OUTSIDE" strokeWidth="0.0" text="Zoom" wrappingWidth="33.13671875" />
-            <RadioButton fx:id="QuickRouteRadio" layoutX="668.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Quickest route" />
-            <RadioButton fx:id="HistoricRouteRadio" layoutX="668.0" layoutY="192.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Historic route" />
-            <RadioButton fx:id="maxRouteRadio" layoutX="668.0" layoutY="234.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Max routes" />
-            <TextField fx:id="routeNo" layoutX="761.0" layoutY="234.0" prefHeight="25.0" prefWidth="47.0" text="1" />
-         </children>
-      </Pane>
-   </center>
+    <top>
+        <Pane prefHeight="100.0" prefWidth="870.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField editable="false" focusTraversable="false" layoutX="324.0" layoutY="23.0" prefHeight="55.0" prefWidth="236.0" text="PARIS NAVIGATOR">
+                    <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+                    </font>
+                </TextField>
+            </children>
+        </Pane>
+    </top>
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Slider fx:id="zoom" layoutX="8.0" layoutY="119.0" majorTickUnit="100.0" maxHeight="300.0" minorTickCount="5" onMousePressed="#closeHand" onMouseReleased="#openHand" orientation="VERTICAL" prefHeight="300.0" prefWidth="46.0" showTickLabels="true" showTickMarks="true">
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Slider>
+                <ImageView fx:id="mapView" fitHeight="371.0" fitWidth="524.0" layoutX="60.0" layoutY="83.0" onMouseClicked="#selectLocation" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@map.png"/>
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="CROSSHAIR" />
+                    </cursor>
+                </ImageView>
+                <Text layoutX="8.0" layoutY="109.0" opacity="0.81" strokeType="OUTSIDE" strokeWidth="0.0" text="Zoom" wrappingWidth="33.13671875" />
+                <RadioButton fx:id="QuickRouteRadio" layoutX="668.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Quickest route" />
+                <RadioButton fx:id="HistoricRouteRadio" layoutX="668.0" layoutY="192.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Historic route" />
+                <RadioButton fx:id="maxRouteRadio" layoutX="668.0" layoutY="234.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Max routes" />
+                <TextField fx:id="routeNo" layoutX="761.0" layoutY="234.0" prefHeight="25.0" prefWidth="47.0" text="1" />
+            </children>
+        </Pane>
+    </center>
 </BorderPane>
