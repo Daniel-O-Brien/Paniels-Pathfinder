@@ -69,7 +69,7 @@ public class Main {
         if (point == null)
             point = new GraphNodeAL<>(new Point2D(x, y));
         else {
-            point.connectToNodeUndirected(new GraphNodeAL<>(new Point2D(x, y)))
+            point.connectToNodeUndirected(new GraphNodeAL<>(new Point2D(x, y)));
 
             System.out.println("You have clicked: " + x + "," + y);
 
@@ -112,14 +112,12 @@ public class Main {
             }
         }
         radius = 1;
-        for (int y = -radius; y < radius; y++) {
-            for (int x = -radius; x < radius; x++) {
-                if(compareColour(x, y))
-                    if(compareColour(x, y)) {
-                        crossroads
-                    }
-            }
-        }
+        for(int y = radius; y < width; y++)
+            for(int x = radius; x < height; x++)
+                for(int circleY = -radius; circleY < radius; circleY++)
+                    for(int circleX = -radius; circleX < radius; circleX++)
+                        if(compareColour(x + circleX, y + circleY))
+                            crossroads.adjList.add(new GraphNodeAL<>(new Point2D(x, y)));
     }
 
     public boolean compareColour(int x, int y) {
