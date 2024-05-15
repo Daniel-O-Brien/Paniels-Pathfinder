@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GraphNodeAL<T> {
     public T data;
-    public List<GraphNodeAL<T>> adjList=new ArrayList<>(); //Could use any List implementation
+    public List<GraphNodeAL<T>> adjList=new ArrayList<>();
     public GraphNodeAL(T data) {
         this.data=data;
     }
@@ -16,4 +16,6 @@ public class GraphNodeAL<T> {
         adjList.add(destNode);
         destNode.adjList.add(this);
     }
+
+
 }
